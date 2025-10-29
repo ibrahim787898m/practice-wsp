@@ -1,0 +1,37 @@
+# Function Examples
+
+# Function: Greet user
+define greet with name:
+    let greeting be "Hello, " + name + "!"
+    whisper greeting
+    give back greeting
+
+# Function: Check if adult
+define is_adult with age:
+    when age greater than 18:
+        give back 1
+    otherwise:
+        give back 0
+
+# Function: Calculate circle area
+define circle_area with radius:
+    let pi be 3.14159
+    let area be pi * radius * radius
+    give back area
+
+# Main program
+ask "What is your name?" into user_name
+call greet with user_name
+
+ask "What is your age?" into user_age
+call is_adult with user_age
+
+is __last_result__ equals 1?
+    yes:
+        show "You are an adult"
+    no:
+        show "You are a minor"
+
+ask "Enter circle radius:" into r
+call circle_area with r
+show "Circle area: " + __last_result__

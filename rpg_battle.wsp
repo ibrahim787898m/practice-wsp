@@ -1,0 +1,62 @@
+# Text Adventure Game
+hey whisper, remember that message is "This is a RPG Battle Game"
+show message
+
+there is a player with health 100, gold 0, items 0
+
+whisper "=== The Quest Begins ==="
+ask "What is your name, traveler?" into name
+
+tell me "Welcome, " + name + "!"
+
+there is a dragon with health 150, treasure 100
+
+let in_battle be 1
+
+while in_battle is 1:
+    whisper "\n1. Attack dragon"
+    whisper "2. Defend"
+    whisper "3. Run away"
+    
+    ask "Your action:" into action
+    
+    when action is 1:
+        let damage be randint(10, 50)
+        the dragon loses damage health
+        show "You dealt " + damage + " damage!"
+        
+        is dragon health less than 1?
+            yes:
+                whisper "🎉 Dragon defeated!"
+                the player gains dragon treasure gold
+                set in_battle to 0
+            no:
+                let counter be randint(5, 20)
+                the player loses counter health
+                show "Dragon hits you for " + counter + " damage!"
+                
+                is player health less than 1?
+                    yes:
+                        whisper "💀 You have been defeated!"
+                        stop
+    
+    or when action is 2:
+        tell me "You defend carefully"
+        let damage be randint(1, 10)
+        the player loses damage health
+        show "You took " + damage + " damage"
+
+        is player health less than 1?
+            yes:
+                whisper "💀 You have been defeated!"
+                stop
+    
+    or when action is 3:
+        whisper "You fled from battle!"
+        stop
+    
+    show "Your health: " + player health
+    show "Dragon health: " + dragon health
+
+show "\nFinal Stats:"
+show "Gold: " + player gold

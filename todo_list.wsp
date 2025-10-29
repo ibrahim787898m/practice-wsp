@@ -1,0 +1,41 @@
+# Todo List Application
+make tasks with []
+let running be 1
+
+whisper "=== Todo List Manager ==="
+
+while running is 1:
+    whisper "\n1. Add task"
+    whisper "2. Show tasks"
+    whisper "3. Remove task"
+    whisper "4. Exit"
+    
+    ask "Choose option (1-4):" into choice
+    
+    when choice is 1:
+        ask "Enter task:" into task
+        add task to tasks
+        tell me "✓ Task added!"
+    
+    or when choice is 2:
+        is tasks equals []?
+            yes:
+                show "No tasks yet!"
+            no:
+                whisper "\nYour Tasks:"
+                let num be 0
+                for each task in tasks:
+                    increase num by 1
+                    show num + ". " + task
+    
+    or when choice is 3:
+        ask "Task to remove:" into task
+        remove task from tasks
+        tell me "✓ Task removed!"
+    
+    or when choice is 4:
+        set running to 0
+        whisper "Goodbye!"
+    
+    otherwise:
+        show "Invalid option!"

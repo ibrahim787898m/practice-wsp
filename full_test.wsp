@@ -1,0 +1,41 @@
+# Comprehensive Whisper Test
+hey whisper, remember that message is "This is a test"
+
+show message
+
+# Variables
+remember that score is 0
+let name be "Player"
+
+# Story object
+there is a hero with health 100, power 10
+
+# Question
+is score equals 0?
+    yes:
+        tell me "Starting game..."
+        set score to 10
+    no:
+        tell me "Game in progress"
+
+# Loop
+do 3 times:
+    increase score by 5
+    the hero gains 2 power
+
+show "Score: " + score
+show "Hero: " + hero
+
+# When/otherwise
+when score greater than 20:
+    tell me "High score!"
+otherwise:
+    tell me "Keep playing"
+
+# Function
+define celebrate:
+    just say "🎉 Success!"
+
+call celebrate
+
+whisper "Test complete!"

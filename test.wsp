@@ -1,0 +1,333 @@
+# Test file: removing value of a variable problem solved
+# hey whisper, remember that old_variable is "This is a Old Variable"
+# forget about old_variable
+# show old_variable
+
+
+
+# Test file: displaying dict of a story problem solved
+
+# there is a hero with health 100, power 50
+# there is a dragon with health 200, damage 30
+# there is an item with name "sword", value 100
+
+# show "Hero: " + hero
+# show "Dragon: " + dragon
+# show "Item: " + item
+
+# show hero
+# show dragon
+# show item
+
+# show hero health
+# show dragon damage
+# show item name
+
+
+
+# Test file: formatting messages problem bug solved
+
+let score be 100
+let message be "Your score is: " + score
+show message
+
+let score be 100
+# let mssg be "Your score is: " + score
+# show mssg
+whisper "Your score is: " + score
+
+
+
+# Test file: story type object dict problem solved
+
+# there is a hero with health 100, attack 20
+
+# show "Hero: " + hero
+
+# show hero
+
+# show hero health
+# show hero attack
+
+# let hero_health be hero health
+# let hero_attack be hero attack
+
+# show "Hero health via variable: " + hero_health
+# show "Hero attack via variable: " + hero_attack
+
+# show "Hero health via direct access: " + hero health
+# show "Hero attack via direct access: " + hero attack
+
+
+
+# Test file: story type math problem solved
+
+# there is a math_problem with number1 10, number2 5
+
+# # Method 1: Direct addition with properties
+# let sum be math_problem number1 + math_problem number2
+# show sum
+
+# # Method 2: Store properties in variables first
+# let num1 be math_problem number1
+# let num2 be math_problem number2
+# let sum be num1 + num2
+# show sum
+
+# # Method 3: Show the result directly
+# show math_problem number1 + math_problem number2
+
+# # Method 4: With text
+# show "Sum: " + math_problem number1 + math_problem number2
+
+
+
+# Test file: comparison problem bug solved
+
+# let x be "Test"
+# let y be "Test"
+
+# when x is y:
+#     whisper "Strings are equal!"
+# otherwise:
+#     whisper "Strings are not equal!"
+
+# let x be 42
+# let y be 42
+
+# when x is y:
+#     whisper "Numbers are equal!"
+# otherwise:
+#     whisper "Numbers are not equal!"
+
+# # Test 1: Basic string equality
+# let name be "Alice"
+# let other_name be "Alice"
+
+# when name is other_name:
+#     whisper "Names are equal!"
+
+# # Test 2: String inequality
+# let word1 be "hello"
+# let word2 be "world"
+
+# when word1 is word2:
+#     whisper "Same word"
+# or when word1 not word2:
+#     whisper "Different words"
+
+# # Test 3: Using question format
+# let answer be "yes"
+
+# is answer is "yes"?
+#     yes:
+#         whisper "User said yes!"
+#     no:
+#         whisper "User said no!"
+
+# # Test 4: Compare with user input
+# ask "Enter your name:" into user_name
+
+# when user_name is "Alice":
+#     whisper "Hello Alice!"
+# or when user_name is "Bob":
+#     whisper "Hello Bob!"
+# otherwise:
+#     whisper "Hello stranger!"
+
+# # Test 5: Using direct comparison
+# let password be "secret123"
+# let input be "secret123"
+
+# is password is input?
+#     yes:
+#         whisper "Access granted!"
+#     no:
+#         whisper "Access denied!"
+
+# # Test 6: Case sensitive comparison
+# let text1 be "Hello"
+# let text2 be "hello"
+
+# when text1 is text2:
+#     whisper "Same text"
+# otherwise:
+#     whisper "Different text (case sensitive)"
+
+# let age be 20
+
+# is age greater than 18?
+#     yes:
+#         tell me "You can vote"
+#     no:
+#         tell me "Too young"
+
+# let score be 50
+
+# is score equals 50?
+#     yes:
+#         tell me "Score is 50"
+#     no:
+#         tell me "Score is not 50"
+
+# let name be "ibrahim"
+
+# is name is "ibrahim"?
+#     yes:
+#         tell me "Welcome, ibrahim!"
+#     no:
+#         tell me "Unknown user"
+
+
+
+# Test file: array bug solved
+
+# make test with ["apple", "banana"]
+# show test
+
+# make numbers with [1, 2, 3, 4, 5]
+# add 8 to numbers
+# remove 3 form numbers
+# show numbers
+
+# make score with []
+# add 10 to score
+# show score
+
+# make groceries with ["apple", "banana", "carrot"]
+# add "mango" to groceries
+# remove "carrot" from groceries
+# show groceries
+
+# make tasks with []
+# add "Buy groceries" to tasks
+# show tasks
+
+# make lists with ["first", "second", "third"]
+# show lists
+
+# make nums with [1, 2, 3, 4, 5]
+# show nums[4]
+
+# make groceries with ["apple", "banana", "carrot"]
+# show groceries[2]
+
+
+
+# Test file: concotenating string with newline problem bug solved
+
+# # Create a log file
+# let timestamp be "2025-10-23"
+# let log be timestamp + ": Program started\n"
+
+# write log to "app.log"
+
+# # Read it back
+# read "app.log" into contents
+
+# # Append more (manual approach)
+# let new_entry be timestamp + ": Task completed\n"
+# let full_log be contents + new_entry
+# write full_log to "app.log"
+
+# read "app.log" into final
+# show final
+
+# let message1 be "hello"
+# let newline1 be "\n"
+# let log1 be message1 + newline1
+# show log1
+
+# let message2 be "hey"
+# let newline2 be "\n"
+# let log2 be message2 + newline2
+# show log2
+
+# let message1 be "hello"
+# show message1 + "\n"
+
+# let message2 be "hello" + "\n"
+# show message2
+
+# let message3 be "hello"
+# let newline be "\n"
+# show message3 + newline
+
+
+
+# Test file: the story object problem bug with loses is solved
+
+# there is a knight with health 100, attack 25
+# there is a goblin with health 80, attack 15
+
+# the knight loses goblin attack health
+
+# show knight health
+
+# there is a knight with health 100, attack 25
+# there is a goblin with health 80, attack 15
+
+# whisper "=== Battle Start ==="
+
+# while knight health > 0 and goblin health > 0:
+#     # Knight attacks
+#     the goblin loses knight attack health
+#     show "Knight attacks! Goblin health: " + goblin health
+    
+#     when goblin health less than 1:
+#         whisper "Goblin defeated!"
+#         break
+    
+#     # Goblin attacks
+#     the knight loses goblin attack health
+#     show "Goblin attacks! Knight health: " + knight health
+    
+#     when knight health less than 1:
+#         whisper "Knight defeated!"
+#         break
+
+# there is a knight with health 100, attack 50, achivement 0
+# there is a goblin with health 100, attack 30, treasure 100
+
+# while knight health > 0 and goblin health > 0:
+#     the goblin loses knight attack health
+#     show "Knight attacks! Goblin health: " + goblin health
+
+#     when goblin health less than 1:
+#         the knight gains goblin treasure achivement
+#         whisper "Goblin defeated!"
+#         show "Knight gains: " + knight achivement + " treasure!"
+#         break
+
+#     the knight loses goblin attack health
+#     show "Goblin attacks! Knight health: " + knight health
+
+#     when knight health less than 1:
+#         whisper "Knight defeated!"
+#         show "Knight gains: " + knight achivement + " treasure!"
+#         break
+
+
+
+# Test file: inline comment problem solved
+
+# show "hello, world!"    # inline comment
+
+
+
+# Test file: try except for file handaling problem solved
+
+# attempt:
+#     read "missing.txt" into data
+# handle:
+#     show "File not found: " + error
+#     let data be "Default content"
+
+# attempt:
+#     write "data" to "/readonly/file.txt"
+# handle:
+#     show "Cannot write: " + error
+
+
+let tries be 10
+whisper "You won " + tries + " tries."

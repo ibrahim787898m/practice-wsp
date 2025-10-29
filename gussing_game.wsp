@@ -1,0 +1,27 @@
+# Number Guessing Game
+whisper "=== Guess the Number ==="
+
+let secret be randint(1, 100)
+let attempts be 0
+let max_tries be 10
+
+while attempts less than max_tries:
+    increase attempts by 1
+    ask "Guess (1-100):" into guess
+    
+    is guess equals secret?
+        yes:
+            whisper "🎉 Correct! You win!"
+            show "Attempts: " + attempts
+            break
+        no:
+            when guess greater than secret:
+                tell me "Too high!"
+            otherwise:
+                tell me "Too low!"
+    
+    let remaining be max_tries - attempts
+    show "Tries left: " + remaining
+
+when attempts equals max_tries:
+    whisper "Game Over! Number was " + secret
